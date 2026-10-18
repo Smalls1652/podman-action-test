@@ -1,0 +1,15 @@
+name: "Run"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run:
+    name: "Run command"
+    runs-on: ubuntu-26.04
+
+    steps:
+      - name: "podman debug info"
+        shell: bash
+        run: |
+          podman info --debug
